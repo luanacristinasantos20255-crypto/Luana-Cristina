@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contato | Haras Elite</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#4a2e1c,#7a4d2d);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* NAV */
+nav{
+    background:#2f1c10;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d8a25e;
+}
+
+/* CONTAINER */
+.container{
+    width:90%;
+    max-width:800px;
+    margin:auto;
+    padding:50px 0;
+}
+
+/* CARD */
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+/* FORM */
+.card h2{
+    color:#5c3a21;
+    margin-bottom:20px;
+}
+
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    transition:.3s;
+    font-size:14px;
+}
+
+input:focus, textarea:focus{
+    border-color:#5c3a21;
+}
+
+/* BOTÃO */
+button{
+    width:100%;
+    padding:15px;
+    background:#5c3a21;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:10px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#8a5a35;
+}
+
+/* MENSAGEM */
+.mensagem{
+    margin-top:15px;
+    padding:15px;
+    background:#e7f7ea;
+    border-left:5px solid green;
+    display:none;
+}
+
+/* RODAPÉ */
+footer{
+    background:#2f1c10;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>📩 Contato e Avaliação</h1>
+    <p>Haras Elite - Fale conosco</p>
+</header>
+
+<nav>
+    <a href="indexsitevendadecavalo.html">Início</a>
+    <a href="carácteristicas.html">Cavalos</a>
+    <a href="vendas.html">Vendas</a>
+    <a href="finalizaçãocompra.html">Compras</a>
+    <a href="formulario.html">Contato</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Envie sua mensagem</h2>
+
+<input type="text" id="nome" placeholder="Seu nome">
+<input type="email" id="email" placeholder="Seu e-mail">
+<input type="text" id="assunto" placeholder="Assunto">
+
+<textarea id="mensagem" rows="6" placeholder="Digite sua mensagem aqui..."></textarea>
+
+<button onclick="enviarFormulario()">
+Enviar Mensagem
+</button>
+
+<div class="mensagem" id="confirmacao">
+Mensagem enviada com sucesso! Em breve entraremos em contato.
+</div>
+
+</div>
+
+</div>
+
+<footer>
+    <h3>Haras Elite</h3>
+    <p>Atendimento especializado 24h</p>
+    <p>© 2025 Todos os direitos reservados</p>
+</footer>
+
+<script>
+
+function enviarFormulario(){
+
+    let nome = document.getElementById("nome").value;
+    let email = document.getElementById("email").value;
+    let assunto = document.getElementById("assunto").value;
+    let mensagem = document.getElementById("mensagem").value;
+
+    if(nome === "" || email === "" || assunto === "" || mensagem === ""){
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+
+    document.getElementById("confirmacao").style.display = "block";
+
+    document.getElementById("nome").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("assunto").value = "";
+    document.getElementById("mensagem").value = "";
+
+    setTimeout(() => {
+        document.getElementById("confirmacao").style.display = "none";
+    }, 4000);
+
+}
+
+</script>
+
+</body>
+</html>

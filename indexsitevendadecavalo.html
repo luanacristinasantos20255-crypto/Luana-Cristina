@@ -1,0 +1,509 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Haras Elite | Cavalos de Alta Qualidade</title>
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f8f8;
+    color:#333;
+}
+
+/* CABEÇALHO */
+
+header{
+    background:linear-gradient(135deg,#4a2e1c,#7a4d2d);
+    color:white;
+    text-align:center;
+    padding:30px;
+    box-shadow:0 3px 15px rgba(0,0,0,.3);
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:10px;
+}
+
+/* MENU */
+
+nav{
+    background:#2f1c10;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d8a25e;
+}
+
+/* HERO */
+
+.hero{
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('imagemdecavalos.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    min-height:80vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h2{
+    font-size:55px;
+    margin-bottom:20px;
+    animation:fadeDown 1s;
+}
+
+.hero p{
+    max-width:800px;
+    font-size:20px;
+    animation:fadeUp 1.2s;
+}
+
+.btn{
+    margin-top:25px;
+    background:#8a5a35;
+    color:white;
+    padding:15px 35px;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#a66c3e;
+}
+
+/* CONTEÚDO */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding:50px 0;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#5c3a21;
+    margin-bottom:15px;
+}
+
+/* DESTAQUES */
+
+.destaques{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin:30px 0;
+}
+
+.box{
+    background:white;
+    text-align:center;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+}
+
+.box h3{
+    color:#5c3a21;
+    margin-bottom:10px;
+}
+
+/* NÚMEROS */
+
+.numeros{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin:40px 0;
+}
+
+.numero{
+    background:white;
+    padding:25px;
+    min-width:220px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.numero h2{
+    color:#5c3a21;
+    font-size:45px;
+}
+
+/* BOTÕES */
+
+.botao{
+    background:#5c3a21;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    margin:10px;
+    transition:.3s;
+}
+
+.botao:hover{
+    background:#8a5a35;
+}
+
+/* GALERIA */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* RODAPÉ */
+
+footer{
+    background:#2f1c10;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    width:65px;
+    height:65px;
+    line-height:65px;
+    text-align:center;
+    border-radius:50%;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+/* ANIMAÇÕES */
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero h2{
+    font-size:35px;
+}
+
+nav a{
+    display:block;
+    margin:10px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🐎 Haras Elite</h1>
+    <p>Excelência na criação e comercialização de cavalos de raça</p>
+</header>
+
+<nav>
+    <a href="indexsitevendadecavalo.html">Início</a>
+    <a href="carácteristicas.html">Cavalos</a>
+    <a href="vendas.html">Vendas</a>
+    <a href="finalizaçãocompra.html">Compras</a>
+    <a href="formulario.html">Contato</a>
+</nav>
+
+
+<section class="hero">
+
+    <h2>Os Melhores Cavalos do Brasil</h2>
+
+    <p>
+        Cavalos selecionados com genética superior,
+        documentação regularizada e acompanhamento veterinário.
+    </p>
+
+    <a href="#" class="btn">Ver Catálogo</a>
+
+</section>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>Quem Somos</h2>
+
+        <p>
+            O Haras Elite é referência nacional na venda de cavalos
+            de alta performance para competições, reprodução e lazer.
+        </p>
+
+    </div>
+
+    <h2 style="text-align:center;color:#5c3a21;">
+        Por que escolher nosso Haras?
+    </h2>
+
+    <div class="destaques">
+
+        <div class="box">
+            <h3>🏆 Qualidade Premium</h3>
+            <p>Cavalos selecionados rigorosamente.</p>
+        </div>
+
+        <div class="box">
+            <h3>📄 Procedência Garantida</h3>
+            <p>Registro e documentação completa.</p>
+        </div>
+
+        <div class="box">
+            <h3>🚚 Entrega Nacional</h3>
+            <p>Transporte especializado para todo o Brasil.</p>
+        </div>
+
+        <div class="box">
+            <h3>💳 Pagamento Facilitado</h3>
+            <p>Parcelamento e diversas formas de pagamento.</p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Galeria de Cavalos</h2>
+
+        <div class="galeria">
+
+            <img src="quartodeM.jpg">
+
+            <img src="cavalo89.jpg">
+
+            <img src="cavalo-crioulo-prestigio-do-itao.jpg">
+
+        </div>
+
+    </div>
+
+    <div class="numeros">
+
+        <div class="numero">
+            <h2>500</h2>
+            <p>Cavalos Vendidos</p>
+        </div>
+
+        <div class="numero">
+            <h2>15</h2>
+            <p>Anos de Experiência</p>
+        </div>
+
+        <div class="numero">
+            <h2>1000</h2>
+            <p>Clientes Satisfeitos</p>
+        </div>
+
+        <div class="numero">
+            <h2>100</h2>
+            <p>% Procedência Garantida</p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Atendimento Especializado</h2>
+
+        <p>
+            Nossa equipe está pronta para ajudar você a escolher o cavalo ideal.
+        </p>
+
+        <button class="botao" onclick="consultor()">
+            Falar com Consultor
+        </button>
+
+        <button class="botao" onclick="mostrarHorario()">
+            Ver Horário
+        </button>
+
+        <p id="horario"></p>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <h3>Haras Elite</h3>
+
+    <p>📞 (11) 99999-9999</p>
+
+    <p>✉ contato@haraselite.com.br</p>
+
+    <p>© 2025 Todos os direitos reservados.</p>
+
+</footer>
+
+<a href="#" class="whatsapp">💬</a>
+
+<script>
+
+window.onload = function(){
+    console.log("Haras Elite carregado!");
+}
+
+function consultor(){
+    alert("Nossa equipe entrará em contato para ajudar você!");
+}
+
+function mostrarHorario(){
+
+    let agora = new Date();
+
+    let horario =
+    agora.getHours().toString().padStart(2,'0')
+    + ":" +
+    agora.getMinutes().toString().padStart(2,'0')
+    + ":" +
+    agora.getSeconds().toString().padStart(2,'0');
+
+    document.getElementById("horario").innerHTML =
+    "🕒 Horário Atual: " + horario;
+}
+
+const numeros = document.querySelectorAll(".numero h2");
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+let alvo = entry.target;
+let final = parseInt(alvo.innerText);
+let atual = 0;
+
+let contador = setInterval(() => {
+
+atual += Math.ceil(final/50);
+
+if(atual >= final){
+atual = final;
+clearInterval(contador);
+}
+
+alvo.innerText = atual;
+
+},30);
+
+observer.unobserve(alvo);
+
+}
+
+});
+
+});
+
+numeros.forEach(numero=>{
+observer.observe(numero);
+});
+
+</script>
+
+</body>
+</html>
+```

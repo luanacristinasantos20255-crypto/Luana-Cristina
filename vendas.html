@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vendas | Haras Elite</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* CABEÇALHO */
+
+header{
+    background:linear-gradient(135deg,#4a2e1c,#7a4d2d);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+nav{
+    background:#2f1c10;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d8a25e;
+}
+
+/* BANNER */
+
+.banner{
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('imagemdecavalos.jpg');
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.banner h2{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding:50px 0;
+}
+
+/* PRODUTOS */
+
+.vendas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.info{
+    padding:25px;
+}
+
+.info h2{
+    color:#5c3a21;
+    margin-bottom:10px;
+}
+
+.preco{
+    color:green;
+    font-size:32px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.parcelamento{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.botao{
+    background:#5c3a21;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.botao:hover{
+    background:#8a5a35;
+}
+
+/* PROMOÇÃO */
+
+.promocao{
+    background:white;
+    padding:30px;
+    margin-top:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.promocao h2{
+    color:#5c3a21;
+    margin-bottom:15px;
+}
+
+/* FORMAS DE PAGAMENTO */
+
+.pagamento{
+    margin-top:40px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.pagamento ul{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+.pagamento li{
+    margin-bottom:10px;
+}
+
+/* RODAPÉ */
+
+footer{
+    background:#2f1c10;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.banner h2{
+    font-size:35px;
+}
+
+nav a{
+    display:block;
+    margin:10px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🐎 Haras Elite</h1>
+    <p>Área de Vendas</p>
+</header>
+
+<nav>
+    <a href="indexsitevendadecavalo.html">Início</a>
+    <a href="carácteristicas.html">Cavalos</a>
+    <a href="vendas.html">Vendas</a>
+    <a href="finalizaçãocompra.html">Compras</a>
+    <a href="formulario.html">Contato</a>
+</nav>
+
+<section class="banner">
+
+    <h2>Escolha Seu Cavalo</h2>
+
+    <p>
+        Cavalos selecionados com qualidade, procedência e documentação garantida.
+    </p>
+
+</section>
+
+<div class="container">
+
+<div class="vendas">
+
+    <!-- ORIGINAL -->
+    <div class="card">
+        <img src="quartodeM.jpg
+">
+        <div class="info">
+            <h2>Thunder</h2>
+            <p>Quarto de Milha • 5 anos</p>
+            <div class="preco">R$ 35.000</div>
+            <div class="parcelamento">ou 12x de R$ 2.916</div>
+            <button class="botao" onclick="comprar('Thunder')">Comprar Agora</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="cavalo89.jpg">
+        <div class="info">
+            <h2>Relâmpago</h2>
+            <p>Mangalarga Marchador • 7 anos</p>
+            <div class="preco">R$ 42.000</div>
+            <div class="parcelamento">ou 12x de R$ 3.500</div>
+            <button class="botao" onclick="comprar('Relâmpago')">Comprar Agora</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="cavalo-crioulo-prestigio-do-itao.jpg">
+        <div class="info">
+            <h2>Imperador</h2>
+            <p>Crioulo • 4 anos</p>
+            <div class="preco">R$ 50.000</div>
+            <div class="parcelamento">ou 12x de R$ 4.166</div>
+            <button class="botao" onclick="comprar('Imperador')">Comprar Agora</button>
+        </div>
+    </div>
+
+    <!-- NOVOS CAVALOS -->
+
+    <div class="card">
+        <img src="cavalos-41centraldecoberturas-_gd-104831.jpg">
+        <div class="info">
+            <h2>Furacão</h2>
+            <p>Mangalarga • 6 anos</p>
+            <div class="preco">R$ 38.000</div>
+            <div class="parcelamento">ou 12x de R$ 3.166</div>
+            <button class="botao" onclick="comprar('Furacão')">Comprar Agora</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="cavaloQ.jpg">
+        <div class="info">
+            <h2>Trovão</h2>
+            <p>Quarto de Milha • 8 anos</p>
+            <div class="preco">R$ 55.000</div>
+            <div class="parcelamento">ou 12x de R$ 4.583</div>
+            <button class="botao" onclick="comprar('Trovão')">Comprar Agora</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="416c85_78075880f26f4cb98a1bc12315cbeff0.jpg">
+        <div class="info">
+            <h2>Diamante</h2>
+            <p>Crioulo • 4 anos</p>
+            <div class="preco">R$ 62.000</div>
+            <div class="parcelamento">ou 12x de R$ 5.166</div>
+            <button class="botao" onclick="comprar('Diamante')">Comprar Agora</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="mangalarga.jpg">
+        <div class="info">
+            <h2>Estrela</h2>
+            <p>Mangalarga Marchador • 5 anos</p>
+            <div class="preco">R$ 47.000</div>
+            <div class="parcelamento">ou 12x de R$ 3.916</div>
+            <button class="botao" onclick="comprar('Estrela')">Comprar Agora</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="beautiful-black-friesian-horse-walks-260nw-2693506135.jpg">
+        <div class="info">
+            <h2>Apache</h2>
+            <p>Frísio • 7 anos</p>
+            <div class="preco">R$ 75.000</div>
+            <div class="parcelamento">ou 12x de R$ 6.250</div>
+            <button class="botao" onclick="comprar('Apache')">Comprar Agora</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="promocao">
+    <h2>🔥 Promoção Especial</h2>
+    <p>Frete grátis para compras neste mês!</p>
+</div>
+
+<div class="pagamento">
+    <h2 style="color:#5c3a21;">Formas de Pagamento</h2>
+    <ul>
+        <li>💳 Cartão</li>
+        <li>📱 PIX</li>
+        <li>🏦 Transferência</li>
+        <li>🤝 Financiamento</li>
+    </ul>
+</div>
+
+</div>
+
+<footer>
+    <h3>Haras Elite</h3>
+    <p>© 2025 Todos os direitos reservados.</p>
+</footer>
+
+<script>
+function comprar(nome){
+    alert("Você escolheu o cavalo: " + nome + ". Finalize a compra na página de compras.");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,382 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cavalos à Venda | Haras Elite</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* CABEÇALHO */
+
+header{
+    background:linear-gradient(135deg,#4a2e1c,#7a4d2d);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+nav{
+    background:#2f1c10;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d8a25e;
+}
+
+/* BANNER */
+
+.banner{
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('imagemdecavalos.jpg');
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.banner h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+    padding:50px 0;
+}
+
+/* CARD DOS CAVALOS */
+
+.cavalos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.info{
+    padding:25px;
+}
+
+.info h2{
+    color:#5c3a21;
+    margin-bottom:15px;
+}
+
+.info p{
+    margin-bottom:8px;
+}
+
+.preco{
+    color:green;
+    font-size:28px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.botao{
+    background:#5c3a21;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    margin-top:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.botao:hover{
+    background:#8a5a35;
+}
+
+/* TABELA */
+
+.tabela{
+    background:white;
+    margin-top:50px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#5c3a21;
+    color:white;
+}
+
+th,td{
+    padding:15px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+/* RODAPÉ */
+
+footer{
+    background:#2f1c10;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.banner h2{
+    font-size:35px;
+}
+
+nav a{
+    display:block;
+    margin:10px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🐎 Haras Elite</h1>
+    <p>Catálogo Completo de Cavalos</p>
+</header>
+
+<nav>
+    <a href="indexsitevendadecavalo.html">Início</a>
+    <a href="carácteristicas.html">Cavalos</a>
+    <a href="vendas.html">Vendas</a>
+    <a href="finalizaçãocompra.html">Compras</a>
+    <a href="formulario.html">Contato</a>
+</nav>
+
+<section class="banner">
+
+    <h2>Nossos Cavalos à Venda</h2>
+
+    <p>
+        Conheça animais selecionados com excelente genética,
+        documentação regularizada e alto desempenho.
+    </p>
+
+</section>
+
+<div class="container">
+
+<div class="cavalos">
+
+    <!-- THUNDER -->
+
+    <div class="card">
+
+        <img src="quartodeM.jpg
+">
+
+        <div class="info">
+
+            <h2>Thunder</h2>
+
+            <p><strong>Raça:</strong> Quarto de Milha</p>
+            <p><strong>Idade:</strong> 5 anos</p>
+            <p><strong>Peso:</strong> 500 kg</p>
+            <p><strong>Altura:</strong> 1,58 m</p>
+            <p><strong>Pelagem:</strong> Castanho</p>
+            <p><strong>Treinamento:</strong> Competições de velocidade</p>
+            <p><strong>Saúde:</strong> Excelente</p>
+
+            <div class="preco">
+                R$ 35.000
+            </div>
+
+            <button class="botao" onclick="detalhes('Thunder')">
+                Ver Detalhes
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- RELÂMPAGO -->
+
+    <div class="card">
+
+        <img src="cavalo89.jpg">
+
+        <div class="info">
+
+            <h2>Relâmpago</h2>
+
+            <p><strong>Raça:</strong> Mangalarga Marchador</p>
+            <p><strong>Idade:</strong> 7 anos</p>
+            <p><strong>Peso:</strong> 550 kg</p>
+            <p><strong>Altura:</strong> 1,62 m</p>
+            <p><strong>Pelagem:</strong> Alazão</p>
+            <p><strong>Treinamento:</strong> Passeio e reprodução</p>
+            <p><strong>Saúde:</strong> Excelente</p>
+
+            <div class="preco">
+                R$ 42.000
+            </div>
+
+            <button class="botao" onclick="detalhes('Relâmpago')">
+                Ver Detalhes
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- IMPERADOR -->
+
+    <div class="card">
+
+        <img src="cavalo-crioulo-prestigio-do-itao.jpg">
+
+        <div class="info">
+
+            <h2>Imperador</h2>
+
+            <p><strong>Raça:</strong> Crioulo</p>
+            <p><strong>Idade:</strong> 4 anos</p>
+            <p><strong>Peso:</strong> 520 kg</p>
+            <p><strong>Altura:</strong> 1,60 m</p>
+            <p><strong>Pelagem:</strong> Preto</p>
+            <p><strong>Treinamento:</strong> Provas campeiras</p>
+            <p><strong>Saúde:</strong> Excelente</p>
+
+            <div class="preco">
+                R$ 50.000
+            </div>
+
+            <button class="botao" onclick="detalhes('Imperador')">
+                Ver Detalhes
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="tabela">
+
+<h2 style="margin-bottom:20px;color:#5c3a21;">
+Comparação dos Cavalos
+</h2>
+
+<table>
+
+<tr>
+<th>Nome</th>
+<th>Raça</th>
+<th>Idade</th>
+<th>Peso</th>
+<th>Preço</th>
+</tr>
+
+<tr>
+<td>Thunder</td>
+<td>Quarto de Milha</td>
+<td>5 anos</td>
+<td>500 kg</td>
+<td>R$ 35.000</td>
+</tr>
+
+<tr>
+<td>Relâmpago</td>
+<td>Mangalarga</td>
+<td>7 anos</td>
+<td>550 kg</td>
+<td>R$ 42.000</td>
+</tr>
+
+<tr>
+<td>Imperador</td>
+<td>Crioulo</td>
+<td>4 anos</td>
+<td>520 kg</td>
+<td>R$ 50.000</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Haras Elite</h3>
+
+<p>Excelência em Cavalos de Raça</p>
+
+<p>© 2025 Todos os direitos reservados</p>
+
+</footer>
+
+<script>
+
+function detalhes(nome){
+
+    alert(
+    "Você está visualizando as características do cavalo: " + nome
+    );
+
+}
+
+</script>
+
+</body>
+</html>
+```
